@@ -1,0 +1,13 @@
+.d-flex {
+  display: flex;
+  max-width: 1170px;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+img {
+  height: 150px;
+}
+
