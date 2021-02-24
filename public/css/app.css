@@ -44,8 +44,13 @@ section {
   text-shadow: 1px 0.5px 0px #ffff;
 }
 
-section img {
+section .img_pasta {
   width: calc(90% / 3);
   padding: 30px 30px;
+  display: flex;
+}
+
+section .img_pasta img {
+  width: -webkit-fill-available;
 }
 

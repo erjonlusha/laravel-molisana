@@ -2,32 +2,9 @@
 
 @section('content')
     <section class="d_flex">
-        <h2>LE LUNGHE</h2>
-        <div class=" d_flex wrap">
-            @foreach ($pasta as $va => $item) 
-                @if($item['tipo'] === 'lunga')
-                    @include('partials.pasta')
-                @endif
-            @endforeach
-        </div>
-
-        <h2>LE CORTE</h2>
-        <div class=" d_flex wrap">
-            @foreach ($pasta as $va => $item) 
-                @if($item['tipo'] === 'corta')
-                    @include('partials.pasta')
-                @endif
-            @endforeach
-        </div>
-
-        <h2>LE CORTISSIME</h2>
-        <div class=" d_flex wrap">
-            @foreach ($pasta as $va => $item) 
-                @if($item['tipo'] === 'cortissima')
-                    @include('partials.pasta')
-                @endif
-            @endforeach
-        </div>
+        @include('partials.pasta', ['title' => "LE LUNGHE", 'type' => "lunga"])
+        @include('partials.pasta', ['title' => "LE CORTE", 'type' => "corta"])
+        @include('partials.pasta', ['title' => "LE CORTISSIME", 'type' => "cortissima"])
     </section>
 @endsection
 

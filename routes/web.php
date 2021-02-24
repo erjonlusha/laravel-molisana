@@ -18,18 +18,24 @@ Route::get('/', function () {
     return view('welcome', compact('pasta'));
 })->name('home');
 
+
+
+
 Route::get('products', function () {
     // dd( json_decode(config('app.pasta'), true) );
     $pasta = json_decode(config('datiPasta.pasta'), true);
     return view('products', compact('pasta'));
 })->name('products');
 
-Route::get('products/{id}', function ($id) {
-    dd($id);
+Route::get('products/{key}', function ($key) {
     $pasta = json_decode(config('datiPasta.pasta'), true);
-    $prodotto = $pasta['id'];
-    return view('product', compact('prodotto'));
-})->name('product');
+    // var_dump($pasta);
+    $prodotto = $pasta[$key];
+    // var_dump($prodotto);
+    return view('prodotto', compact('prodotto'));
+})->name('prodotto');
+
+
 
 
 Route::get('contacts', function () {
