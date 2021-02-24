@@ -5,4 +5,4 @@
     <li>{{$prodotto['cottura']}}</li>
     <li>{{$prodotto['peso']}}</li>
 </ul>
-    <p>{{$prodotto['descrizione']}}</p>
+    <p>{!! $prodotto['descrizione'] !!}</p>
